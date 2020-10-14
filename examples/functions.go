@@ -2,6 +2,10 @@ package examples
 
 import "fmt"
 
+func init() {
+	fmt.Println("function")
+}
+
 func NormalFunctionWithParameters(x int, y int) int {
 	sum := x + y
 	return sum

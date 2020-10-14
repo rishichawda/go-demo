@@ -1,6 +1,12 @@
 package examples
 
-func IfExample()  {
+import "fmt"
+
+func init() {
+	fmt.Println("conditionals")
+}
+
+func IfExample() {
 	i := 2
 	if i <= 4 {
 		print(i)
@@ -33,11 +39,11 @@ func ifElsePattern() {
 	// }
 }
 
-func TypeSwitchExample()  {
-	// switch value := interfaceObject.(type) {
-	// case ExpectedType1:
+func TypeSwitchExample() {
+	// switch value := processableRect.(type) {
+	// case Rect:
 	// 	// If it contains value of this type
-	// case ExpectedType2:
+	// case Circle:
 	// 	// If it contains value of this type
 	// default:
 	// 	// some other type

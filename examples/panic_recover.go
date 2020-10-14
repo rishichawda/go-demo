@@ -2,11 +2,13 @@ package examples
 
 import "fmt"
 
-func panicDeferAndRecover() (i int) {
+func PanicDeferAndRecover() (i int) {
 	i = 0
 	defer func() {
+		println("defer runs before returning")
 		i += 1
 	}()
+	println(i)
 	fmt.Println("Startin..")
 	recoverFunction()
 	// This gets executed because the flow was recovered in the defer call using recover.
@@ -16,7 +18,7 @@ func panicDeferAndRecover() (i int) {
 
 func recoverFunction() {
 	fmt.Println("Recover function started executing..")
-	defer func ()  {
+	defer func() {
 		fmt.Printf("Recovered value: %v\n", recover())
 	}()
 	// First this defer & then the recover call is done as defer follows LIFO queue

@@ -18,7 +18,7 @@ func MakeExample() {
 func MapOfStructures() {
 	var rectMap = make(map[string]Rect)
 	rectMap = map[string]Rect{
-		"1": { 2, 4 },
+		"1": {2, 4},
 	}
 	println(rectMap)
 }

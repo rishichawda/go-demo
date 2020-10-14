@@ -1,10 +1,8 @@
 package examples
 
-import "fmt"
-
 type Rect struct {
 	length float32
-	width float32
+	width  float32
 }
 
 type Circle struct {
@@ -16,15 +14,18 @@ type Processable interface {
 }
 
 func (r *Rect) calculate() {
-
+	r.length = 3
 }
 
 func (c *Circle) calculate() {
-	
+
 }
 
 func CalculateAreaForShape() {
-	var rectangle = Rect{2, 4}
-	// var rectangle2 = Rect{length: 2}
-	fmt.Println(rectangle)
+	// var processableRect Processable
+	var rectangle Rect
+	rectangle.calculate()
+	// processableRect = rectangle
+	// // var rectangle2 = Rect{length: 2}
+	// fmt.Println(processableRect.calculate())
 }

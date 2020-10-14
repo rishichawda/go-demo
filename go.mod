@@ -8,5 +8,5 @@ replace examples => ./examples
 
 require (
 	demopackage v0.0.0-00010101000000-000000000000
-	examples v0.0.0-00010101000000-000000000000 // indirect
+	examples v0.0.0-00010101000000-000000000000
 )
